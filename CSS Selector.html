@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selector Forms – Modified</title>
+
+    <style>
+        /* ========================= */
+        /* SIMPLE SELECTORS */
+        /* ========================= */
+
+        /* Element selector */
+        p {
+            color: darkgreen;
+            font-size: 15px;
+        }
+
+        /* ID selector */
+        #mainTitle {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Class selector */
+        .highlight {
+            background-color: #ffeaa7;
+            padding: 5px;
+            border-left: 4px solid orange;
+        }
+
+        /* Group selector */
+        h2, h3 {
+            color: #6c5ce7;
+            text-transform: uppercase;
+        }
+
+        /* Universal selector */
+        * {
+            font-family: Verdana;
+        }
+
+        /* ========================= */
+        /* COMBINATORY SELECTORS */
+        /* ========================= */
+
+        /* Descendant selector */
+        section p {
+            background-color: #ecf0f1;
+            padding: 5px;
+        }
+
+        /* Child selector */
+        ol > li {
+            color: #d63031;
+        }
+
+        /* Adjacent sibling selector */
+        h2 + div {
+            border: 2px dashed gray;
+            padding: 10px;
+        }
+
+        /* General sibling selector */
+        h3 ~ span {
+            color: teal;
+            font-weight: bold;
+        }
+
+        /* ========================= */
+        /* PSEUDO-CLASS SELECTORS */
+        /* ========================= */
+
+        a:hover {
+            background-color: black;
+            color: white;
+            padding: 3px;
+        }
+
+        li:last-child {
+            background-color: lightpink;
+        }
+
+        /* ========================= */
+        /* PSEUDO-ELEMENT SELECTORS */
+        /* ========================= */
+
+        p::first-line {
+            font-weight: bold;
+            color: brown;
+        }
+
+        p::before {
+            content: "👉 ";
+        }
+
+        /* ========================= */
+        /* ATTRIBUTE SELECTORS */
+        /* ========================= */
+
+        input[type="email"] {
+            border: 2px solid green;
+            padding: 5px;
+        }
+
+        a[target="_self"] {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="mainTitle">Modified CSS Selector Demo</h1>
+
+    <h2>Simple Selectors</h2>
+    <p>This paragraph uses element selector.</p>
+    <p class="highlight">This paragraph uses class selector.</p>
+
+    <h3>Group Selector Example</h3>
+    <p>Heading styles are grouped.</p>
+
+    <h2>Combinatory Selectors</h2>
+
+    <section>
+        <p>This paragraph is inside a section tag.</p>
+    </section>
+
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+    </ol>
+
+    <h2>Adjacent Sibling Selector</h2>
+    <div>This div comes immediately after h2</div>
+
+    <h3>General Sibling Selector</h3>
+    <span>Sibling span one</span><br>
+    <span>Sibling span two</span>
+
+    <h2>Pseudo-class Selector</h2>
+    <a href="#" target="_self">Hover on this link</a>
+
+    <h2>Pseudo-element Selector</h2>
+    <p>This paragraph demonstrates pseudo elements clearly.</p>
+
+    <h2>Attribute Selector</h2>
+    <input type="email" placeholder="Enter email">
+
+</body>
+</html>

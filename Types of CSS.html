@@ -1,32 +1,106 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
-    <title>Types of CSS</title>
+    <title>Food Control and Safety</title>
 
-            p {
-            color: green;        
-            font-size: 18px;             }
-    </style>
-
-    <!-- Internal CSS -->
+    <!-- ===== External Style (simulated) ===== -->
     <style>
-        /* Selector: h2 */
+        /* Selector: body
+           Property: background-color
+           Value: #c8f7c5 */
+        body {
+            background-color: #c8f7c5;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Selector: h2
+           Property: color
+           Value: darkgreen */
         h2 {
-            color: blue;        
-            text-align: center;         }
+            color: darkgreen;
+        }
+
+        /* Selector: p
+           Property: font-size
+           Value: 16px */
+        p {
+            font-size: 16px;
+        }
+
+        /* ===== Internal Style ===== */
+
+        /* Selector: h1
+           Property: color
+           Value: green */
+        h1 {
+            color: green;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* Selector: section
+           Property: background-color
+           Value: #eaffea */
+        section {
+            background-color: #eaffea;
+            border: 2px solid green;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        /* Selector: ul
+           Property: list-style-type
+           Value: square */
+        ul {
+            list-style-type: square;
+        }
     </style>
 </head>
 
 <body>
 
-<!-- Inline CSS -->
-<h1 style="color:red; font-size:30px;">
-    Inline CSS Example
-</h1>
+    <!-- ===== Inline Style ===== -->
+    <h1 style="text-decoration: underline;">
+        Food Control and Public Safety
+    </h1>
+    <!-- Selector: h1
+         Property: text-decoration
+         Value: underline -->
 
-<h2>Internal CSS Example</h2>
+    <section>
+        <h2>What is Food Control?</h2>
+        <p>
+            Food control refers to the measures and regulations applied to ensure
+            that food is safe, hygienic, nutritious, and suitable for human consumption.
+            It plays a vital role in protecting public health.
+        </p>
+    </section>
 
-<p>External CSS Example</p>
+    <section>
+        <h2>Why Food Control is Important</h2>
+        <p>
+            Effective food control helps prevent food-borne illnesses, ensures
+            quality standards, and builds consumer confidence in food products.
+        </p>
+
+        <p style="color: darkred; font-weight: bold;">
+            Unsafe food can cause serious health problems and outbreaks of disease.
+        </p>
+        <!-- Selector: p
+             Property: color
+             Value: darkred -->
+    </section>
+
+    <section>
+        <h2>Key Objectives of Food Control</h2>
+        <ul>
+            <li>Ensure food hygiene and cleanliness</li>
+            <li>Prevent contamination and adulteration</li>
+            <li>Maintain nutritional quality</li>
+            <li>Protect consumer health</li>
+        </ul>
+    </section>
 
 </body>
 </html>
