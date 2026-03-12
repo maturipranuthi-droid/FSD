@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>All Number Programs</title>
+</head>
+<body>
+
+<h2>Factorial, Fibonacci, Prime Numbers, Palindrome</h2>
+
+<script>
+// Factorial
+function factorial(n) {
+    let fact = 1;
+    for (let i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+// Fibonacci
+function fibonacci(num) {
+    let a = 0, b = 1, next;
+    let series = "";
+    while (a <= num) {
+        series += a + " ";
+        next = a + b;
+        a = b;
+        b = next;
+    }
+    return series.trim();
+}
+
+// Prime Numbers
+function primeNumbers(n) {
+    let primes = "";
+    for (let i = 2; i <= n; i++) {
+        let isPrime = true;
+        for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            primes += i + " ";
+        }
+    }
+    return primes.trim();
+}
+
+// Palindrome
+function checkPalindrome(num) {
+    let original = num;
+    let reverse = 0;
+    while (num > 0) {
+        let digit = num % 10;
+        reverse = reverse * 10 + digit;
+        num = Math.floor(num / 10);
+    }
+    if (original === reverse) {
+        return original + " is a Palindrome Number";
+    } else {
+        return original + " is NOT a Palindrome Number";
+    }
+}
+
+// Prompt once for a number
+let number = parseInt(prompt("Enter a number:"));
+
+// Run all programs and display results
+document.write("<h3>Factorial:</h3>");
+document.write("Factorial of " + number + " is " + factorial(number) + "<br><br>");
+
+document.write("<h3>Fibonacci Series:</h3>");
+document.write(fibonacci(number) + "<br><br>");
+
+document.write("<h3>Prime Numbers up to " + number + ":</h3>");
+document.write(primeNumbers(number) + "<br><br>");
+
+document.write("<h3>Palindrome Check:</h3>");
+document.write(checkPalindrome(number));
+</script>
+
+</body>
+</html>

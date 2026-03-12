@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Taking Input - Method 2</title>
+</head>
+<body>
+
+  <h2>Different Ways of Taking Input (Method 2)</h2>
+
+  Enter your age:
+  <input type="number" id="age">
+  <br><br>
+
+  Enter your favorite subject:
+  <input type="text" id="subject">
+  <br><br>
+
+  <button onclick="getInput()">Submit</button>
+
+  <p id="result"></p>
+
+  <script>
+    function getInput() {
+      var age = document.getElementById("age").value;        // number input
+      var subject = document.getElementById("subject").value; // textbox input
+      var likeJS = confirm("Do you like JavaScript?");      // confirm input
+      var country = prompt("Enter your country:");         // prompt input
+
+      document.getElementById("result").innerHTML =
+        "Age: " + age + "<br>" +
+        "Favorite Subject: " + subject + "<br>" +
+        "Likes JavaScript: " + likeJS + "<br>" +
+        "Country: " + country;
+    }
+  </script>
+
+</body>
+</html>

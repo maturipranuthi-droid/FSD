@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Different Ways of Displaying Output</title>
+</head>
+<body>
+
+  <h2>JavaScript Output Methods</h2>
+
+  <div id="box"></div>
+  <p id="text"></p>
+
+  <button onclick="showAlert()">Show Alert</button>
+  <button onclick="showText()">Show Text</button>
+  <button onclick="showHTML()">Show HTML</button>
+  <button onclick="showConsole()">Show Console</button>
+  <button onclick="createElementOutput()">Create Element</button>
+
+  <script>
+    // 1. Using alert()
+    function showAlert() {
+      alert("This is output using alert()");
+    }
+
+    // 2. Using textContent
+    function showText() {
+      document.getElementById("text").textContent = 
+        "This is output using textContent";
+    }
+
+    // 3. Using innerHTML
+    function showHTML() {
+      document.getElementById("box").innerHTML = 
+        "<b>This is output using innerHTML</b>";
+    }
+
+    // 4. Using console.log()
+    function showConsole() {
+      console.log("This is output using console.log()");
+    }
+
+    // 5. Creating and appending a new element
+    function createElementOutput() {
+      let p = document.createElement("p");
+      p.textContent = "This is output using createElement() and appendChild()";
+      document.body.appendChild(p);
+    }
+  </script>
+
+</body>
+</html>

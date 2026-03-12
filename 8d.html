@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Object Loop Example</title>
+</head>
+
+<body>
+
+<h2>Display Object Data Using Different Loops</h2>
+
+<script>
+
+// Creating an object
+let student = {
+    name: "David",
+    age: 20,
+    course: "Computer Science",
+    city: "Chennai"
+};
+
+// Using for-in loop
+document.write("<b>Using for-in loop:</b><br>");
+for(let key in student) {
+    document.write(key + " : " + student[key] + "<br>");
+}
+
+// Using for-each loop
+document.write("<br><b>Using for-each loop:</b><br>");
+Object.entries(student).forEach(function(item){
+    document.write(item[0] + " : " + item[1] + "<br>");
+});
+
+// Using for-of loop
+document.write("<br><b>Using for-of loop:</b><br>");
+for(let [key, value] of Object.entries(student)) {
+    document.write(key + " : " + value + "<br>");
+}
+
+</script>
+
+</body>
+</html>

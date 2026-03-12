@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form Validation</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<!-- Name -->
+Name: <input type="text" id="name"><br><br>
+
+<!-- Mobile -->
+Mobile Number: <input type="text" id="mobile"><br><br>
+
+<!-- Email -->
+E-mail: <input type="text" id="email"><br><br>
+
+<button onclick="validateForm()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+    let email = document.getElementById("email").value;
+
+    // Patterns
+    let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+    let mobilePattern = /^[0-9]{10}$/;
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    let messages = [];
+
+    // Validate Name
+    if (namePattern.test(name)) {
+        messages.push("Valid Name");
+    } else {
+        messages.push("Invalid Name. Name must start with a letter and contain at least 6 characters.");
+    }
+
+    // Validate Mobile
+    if (mobilePattern.test(mobile)) {
+        messages.push("Valid Mobile Number");
+    } else {
+        messages.push("Invalid Mobile Number. Enter exactly 10 digits.");
+    }
+
+    // Validate Email
+    if (emailPattern.test(email)) {
+        messages.push("Valid Email Address");
+    } else {
+        messages.push("Invalid Email Format");
+    }
+
+    // Display results
+    document.getElementById("result").innerHTML = messages.join("<br>");
+}
+</script>
+
+</body>
+</html>

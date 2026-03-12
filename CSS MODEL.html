@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model - Java Importance (Centered)</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;      /* vertical center */
+            justify-content: center;  /* horizontal center */
+            background-color: #ADD8E6;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 340px;               /* i. Content */
+            background-color: #FFFFE0;  /* Content area */
+            padding: 20px;              /* iii. Padding */
+            border: 5px solid #2e7d32;  /* ii. Border */
+            margin: 20px;               /* iv. Margin */
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        h2 {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSS Box Model – Java Importance</h2>
+
+    <div class="box">
+        <b>Java is important</b> because it is platform-independent, secure, and widely used in
+        web applications, Android development, enterprise software, and backend systems.
+        <br><br>
+        This content is placed inside a centered box using the CSS Box Model.
+    </div>
+
+</body>
+</html>
